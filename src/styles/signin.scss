@@ -1,0 +1,93 @@
+h1 {
+    font-family: $main-font, sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 0px;
+    color: #000;
+}
+
+.signinWrapper {
+    background: $bg-gradient;
+    font-family: $main-font, sans-serif;
+}
+
+.signinSection {
+    padding:0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.signinForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40vw;
+    background: #FFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #F2F2F2;
+
+    h1 {
+        margin: 60px 0 50px 0;
+    }
+
+    p.error {
+        margin-top: 3px;
+        color: #ab1c1a;
+    }
+
+    .input-group {
+        margin-bottom: 29px;
+
+        label {
+            display: block;
+            height: 23px;
+            font-weight: normal;
+            font-size: 16px;
+        }
+    
+        input {
+            width: 30vw;
+            height: 54px;
+            border: 1px solid #707070;
+            margin-top: 4px;
+            padding: 4px 23px;
+            font-weight: normal;
+            font-size: 14px;
+        }
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $placeholder-text-color;
+        opacity: 1; /* Firefox */
+    }
+      
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $placeholder-text-color;
+    }
+      
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: $placeholder-text-color;
+    }
+
+    button {
+        width: 15vw;
+        height: 54px;
+        margin-top: 13px;
+        margin-bottom: 50px;
+        background: #000;
+        font-weight: bold;
+        font-size: 14px;
+        color: #FFF;
+    }
+}
+
+.registerLink {
+    text-align: right;
+    width: 40vw;
+    margin-top: 12px;
+    font-size: 14px;
+}

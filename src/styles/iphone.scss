@@ -1,0 +1,526 @@
+/* iphone page media queries */
+@media screen and (max-width: 575px) {
+    .iphoneContainer {
+        grid-template-columns: 100px minmax(0, 1fr) 100px;
+        grid-template-areas: 
+        "apple topNav topNav"
+        "productBody productBody products"
+        "productImage productImage productImage"
+        "productView productView productView"
+        "buy buy buy";
+
+        .iphoneBody {
+            .iphoneBodyContent {
+                padding: 24px 26px 23px 26px;
+
+                .contentLogo{
+                    display: none;
+                } 
+
+                .productName {
+                    margin: 0;
+                }
+
+                .productHeadline {
+                    margin: 17px 0 0 0;
+
+                    h1 {
+                        font-size: 50px;
+                    }
+                }
+
+                .productTagline {
+                    h3 {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .productView {
+            .imageThumbs {
+                margin: 20px 0 20px 30px;
+            }
+
+            .slider {
+                margin: 0 0 0 60px;
+            }
+        }
+
+        .iphoneImage {
+            margin: 0 0 0 50px;
+
+            img {
+                max-width: 250px;
+                height: auto;
+            }
+        }
+
+        .products {
+            margin: 150px 0 150px 0;
+        }
+
+        .buy {
+            margin: 50px 0 50px 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .topNav {
+        .hamburger {
+            display: block;
+        }
+    }
+
+    .iphoneContainer {
+        grid-template-columns: 100px minmax(0, 1fr) 100px;
+        grid-template-areas: 
+        "apple topNav topNav"
+        "productBody productBody products"
+        "productImage productImage productImage"
+        "productView productView productView"
+        "buy buy buy";
+
+        .iphoneBody {
+            .iphoneBodyContent {
+                padding: 44px 36px 33px 36px;
+
+                .contentLogo{
+                    display: none;
+                } 
+
+                .productName {
+                    margin: 0;
+                }
+
+                .productHeadline {
+                    margin: 17px 0 0 0;
+
+                    h1 {
+                        font-size: 50px;
+                    }
+                }
+
+                .productTagline {
+                    h3 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .iphoneImage {
+            margin: 50px 0 0 25px;
+        }
+
+        .products {
+            margin: 120px 0 150px 0;
+        }
+
+        .buy {
+            margin: 0 0 50px 6vw;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .iphoneContainer {
+        grid-template-columns: 100px minmax(0, 1fr) 100px;
+        grid-template-areas: 
+        "apple topNav topNav"
+        ". productBody products"
+        ". productImage productImage"
+        ". productView productView" 
+        ". buy buy";
+        
+        .iphoneBody {
+            .iphoneBodyContent {
+                
+                padding: 44px 36px 33px 36px;
+
+                .contentLogo{
+                    display: none;
+                } 
+
+                .productName {
+                    margin: 0;
+                }
+
+                .productHeadline {
+                    margin: 17px 0 0 0;
+
+                    h1 {
+                        font-size: 60px;
+                    }
+                }
+
+                .productTagline {
+                    h3 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .iphoneImage {
+            margin: 50px 150px 0 0;
+        }
+
+        .products {
+            margin: 120px 0 150px 0;
+        }
+
+        .productView {
+            width: 454px;
+            margin: 0;
+        }
+
+        .buy {
+            margin: 50px 0 50px 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .iphoneContainer {
+        grid-template-columns: 100px minmax(0, 1fr) minmax(0,1fr) minmax(0, 1fr) 100px;
+        grid-template-areas: 
+        "apple topNav topNav topNav products"
+        ". productBody productBody productImage products"
+        ". buy productView productImage products";
+
+        .iphoneBody {
+            .iphoneBodyContent {
+                padding: 84px 76px 73px 76px;
+
+                .contentLogo{
+                    display: block;
+                    margin: 0 0 0 600px;
+                } 
+
+                .productName {
+                    margin: 0 0 0 14px;
+                }
+
+                .productHeadline {
+                    margin: -150px 0 0 0;
+
+                    h1 {
+                        font-size: 100px;
+                    }
+                }
+
+                .productTagline {
+                    h3 {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
+        .iphoneImage {
+            margin: 126px 0 0 60px;
+        }
+
+        .products {
+            margin: 480px 0 150px 0;
+        }
+
+        .buy {
+            margin: 169px 0 105px 6vw;
+        }
+
+        .productView {
+            width: 454px;
+            margin: 0 0 0 5vw;
+        }
+    }
+}
+
+/* main container element */
+.iphoneContainer {
+    display: grid;
+    grid-template-rows: 100px auto auto auto auto;
+    background: #FFF;
+}
+
+/* apple logo - upper left-hand corner*/
+.apple {
+    grid-area: apple;
+    background: #000;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* main iphone content body */
+.iphoneBody {
+    grid-area: productBody;
+
+    .iphoneBodyContent {
+        background: transparent linear-gradient(90deg, #F2F2F2 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+            
+        .productName {
+            position: relative;
+            z-index: 2;
+
+            h2 {    
+                margin: 0;
+                font-family: $main-font, sans-serif;
+                font-weight: bold;
+                font-size: 32px;
+                color: #FF3B30;
+            }
+        }
+    
+        .productHeadline {
+            position: relative;
+            z-index: 2;
+            max-width: 50vw;
+    
+            h1 {
+                margin: 0;
+                font-family: $main-font, sans-serif;
+                font-size: 36px;
+                color: #000;
+            }
+        }
+
+        .contentLogo{
+            position: relative;
+            z-index: 1;
+            
+            img {
+                max-width: 165px;
+                height: auto;
+            }
+        } 
+        
+        .productTagline {
+            position: relative;
+            z-index: 2;
+            margin: 27px 0 0 5px;
+            max-width: 40vw;
+    
+            h3 {
+                margin: 0;
+                font-family: $main-font, sans-serif;
+                font-weight: normal;
+                line-height: 40px;
+                color: #999999;
+            }
+        }
+    
+        .shippingDate {
+            position: relative;
+            z-index: 2;
+
+            margin: 15px 0 0 5px;
+            font-size: 14px;
+            color: #FF3B30;
+        }
+    }
+}
+
+/* buy area */
+.buy {
+    grid-area: buy;
+
+    .price {
+        white-space: nowrap;
+        min-width: 289px;
+        font-family: $main-font, sans-serif;
+        font-weight: bold;    
+        font-size: 50px;
+        color: #CCCCCC;
+    }
+
+    .buyNow {
+        white-space: nowrap;
+        font-family: $main-font;
+        font-size: 20px;
+        color: #FF3B30;
+    }
+}
+
+/* front/back product selection slider */
+.productView {
+    grid-area: productView;
+
+    .imageThumbs {
+        margin: 51px 0 15px 0;
+
+        img {
+            margin: 0 21px;
+        }
+    }
+
+    .imageThumbs.front {
+        .iphoneFront {
+            animation: animateThumbToFrontActive 700ms forwards;
+        }
+        .iphoneBack{
+            animation: animateThumbToBackInactive 700ms forwards;
+        }
+    }
+
+    .imageThumbs.back {
+        .iphoneFront {
+            animation: animateThumbToFrontInactive 700ms forwards;
+        }
+        .iphoneBack{
+            animation: animateThumbToBackActive 700ms forwards;
+        }
+    }
+    
+    .slider {
+        display: flex;
+        overflow-x: auto;
+        margin: 0 0 0 40px;
+        width: 217px; 
+        height: 9px;
+
+        .slide {
+            width: 204px;
+            flex-shrink: 0;
+            height: 100%;
+        }
+    }
+
+    .slider::-webkit-scrollbar {
+        width: 9px;
+    }
+      
+    .slider::-webkit-scrollbar-track {
+        background-color: #F2F2F2;
+    }
+      
+    .slider::-webkit-scrollbar-thumb {
+        background-color: #FF3B30;
+    }
+    
+    .slider::-webkit-scrollbar:vertical {
+        display: none;
+    }
+}
+
+/* main iphone image */
+.iphoneImage {
+    grid-area: productImage;
+    z-index: 2;
+
+    img {
+        width: 320px;
+        max-width: 320px;
+        height: auto;
+    }
+
+    img.front {
+        animation: animateMainToFrontActive 700ms forwards;
+    }
+
+    img.back {
+        animation: animateMainToBackActive 700ms forwards;
+    }
+}
+
+/* products icon list on right nav */
+.products {
+    grid-area: products;
+    justify-self: right;
+    text-align: center;
+    z-index: 3;
+
+    .verticalProductIcons {
+        margin: 0 54px 0 0;
+
+        img {
+            margin-bottom: 30px;
+        }
+
+        img.iphoneIcon {
+            max-width: 30px;
+            height: auto;
+        }
+
+        img.macbookIcon {
+            max-width: 39px;
+            height: auto;
+        }
+
+        img.appleWatchIcon {
+            max-width: 19px;
+            height: auto;
+        }
+    }
+}
+
+/* keyframes */
+@keyframes animateThumbToFrontActive {
+    0% {
+        opacity: .5;
+        content:url("../images/iphoneFrontTransThumb.png");
+    }
+    100% {
+        opacity: 1;
+        content:url("../images/iphoneFrontFullThumb.png");
+    }
+}
+
+@keyframes animateThumbToFrontInactive {
+    0% {
+        opacity: .5;
+        content:url("../images/iphoneFrontFullThumb.png");
+    }
+    100% {
+        opacity: 1;
+        content:url("../images/iphoneFrontTransThumb.png");
+    }
+}
+
+@keyframes animateThumbToBackActive {
+    0% {
+        opacity: .5;
+        content:url("../images/iphoneBackTransThumb.png");
+    }
+    100% {
+        opacity: 1;
+        content:url("../images/iphoneBackFullThumb.png");
+    }
+}
+
+@keyframes animateThumbToBackInactive {
+    0% {
+        opacity: .5;
+        content:url("../images/iphoneBackFullThumb.png");
+    }
+    100% {
+        opacity: 1;
+        content:url("../images/iphoneBackTransThumb.png");
+    }
+}
+
+@keyframes animateMainToFrontActive {
+    0% {
+        opacity: .5;
+        content:url("../images/iphoneFrontTrans.png");
+    }
+    100% {
+        opacity: 1;
+        content:url("../images/iphoneFrontFull.png");
+    }
+}
+
+@keyframes animateMainToBackActive {
+    0% {
+        opacity: .5;
+        content:url("../images/iphoneBackTrans.png");
+    }
+    100% {
+        opacity: 1;
+        content:url("../images/iphoneBackFull.png");
+    }
+}

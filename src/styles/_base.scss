@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+}
+
+/* transition group settings */
+.pagefade-enter {
+  opacity: 0.01;
+}
+
+.pagefade-enter.pagefade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.pagefade-exit {
+  opacity: 1;
+}
+
+.pagefade-exit.pagefade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+div.transition-group {
+  position: relative;
+}
+
+section.route-section {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}

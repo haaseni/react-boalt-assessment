@@ -1,0 +1,181 @@
+/* mediaqueries for the welcome page */
+@media (min-width: 576px) {
+    .welcomeContainer {
+        grid-template-areas: 
+        "apple topNav ."
+        ". contentBody .";
+    }
+}
+
+@media (min-width: 768px) {
+    .welcomeContainer {
+        grid-template-areas: 
+        "apple topNav ."
+        ". contentBody .";
+    }
+}
+
+@media (min-width: 992px) {
+    .welcomeContainer {
+        grid-template-areas: 
+        "apple topNav ."
+        ". contentBody .";
+    }
+}
+
+/* main container element for the welcome page */
+.welcomeContainer {
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas: 
+        "apple topNav"
+        ". contentBody";
+    background: #FFF;
+
+    .apple {
+        grid-area: apple;
+        background: #000;
+    
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .contentBody {
+        grid-area: contentBody;
+        justify-self: center;
+        width: 100%;
+        background: transparent linear-gradient(90deg, #F2F2F2 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+    
+        .contentLogo{
+            z-index: 1;
+            position: relative;
+            margin-top: 200px;
+            text-align: center;
+            opacity: 0.35;
+    
+            img {
+                width: 295px;
+                height: 362px;
+                animation: moveAppleLogo 3s forwards;
+            }
+        } 
+    
+        h1 {
+            z-index: 2;
+            position: relative;
+            height: 111px;
+            text-align: center;
+            font-family: $main-font, sans-serif;
+            font-size: 79px;
+            color: #000;
+            animation: moveWelcomeMessage 3s forwards;  
+        }
+    
+        .products {
+            margin: 156px 0 150px 0;
+            text-align: center;
+    
+            a.productsLink {
+                position: relative;
+                font-size: 20px;
+                color: #5AC8FA;
+                animation: moveProductsLink 3s forwards;
+            }
+    
+            .productIcons {
+                position: relative;;
+                margin-left: 62px;
+                animation: moveProductIcons 3s forwards;
+    
+                img {
+                    margin-right: 50px;
+                }
+        
+                img.iphoneIcon {
+                    animation: moveIphoneIcon 3s forwards;
+                }
+        
+                img.macbookIcon {
+                    animation: moveMacbookIcon 3s forwards;
+                }
+        
+                img.appleWatchIcon {
+                    animation: moveAppleWatchIcon 3s forwards;
+                }
+            }
+        }
+    }
+}
+
+/* keyframes */
+@keyframes moveAppleLogo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveWelcomeMessage {
+    0% {
+        top: -300px;
+    }
+    100% {
+        top: -250px;
+    }
+}
+
+@keyframes moveProductsLink {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -250px;
+    }
+}
+
+@keyframes moveProductIcons {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -100px;
+    }
+}
+
+@keyframes moveIphoneIcon {
+    0% {
+        width: 35px;
+        height: 63px;
+    }
+    100% {
+        width: 15px;
+        height: 29px;
+    }
+}
+
+@keyframes moveMacbookIcon {
+    0% {
+        width: 77px;
+        height: 50px;
+    }
+    100% {
+        width: 39px;
+        height: 23px;
+    }
+}
+
+@keyframes moveAppleWatchIcon {
+    0% {
+        width: 41px;
+        height: 68px;
+    }
+    100% {
+        width: 19px;
+        height: 31px;
+    }
+}

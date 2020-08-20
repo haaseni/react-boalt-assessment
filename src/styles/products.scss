@@ -1,0 +1,124 @@
+body {
+    background: none;
+    font-family: $main-font, sans-serif;
+}
+
+.productsContainer {
+    header {
+        height: 100px;
+        background: #000;
+        text-align: center;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .productsSection {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        background: $bg-gradient;
+        animation: shrinkBackground 3s forwards 1;
+        height: 800px;
+
+        .contentLogo {
+            position: relative;
+            z-index: 1;
+            margin-top: 197px;
+
+            img {
+                width: 295px;
+                height: 362px;
+                animation: moveAppleLogo 3s forwards
+            }
+        }
+
+        h1 {
+            position: relative;
+            z-index: 2;
+            font-family: $main-font, sans-serif;
+            font-weight: normal;
+            font-size: 25px;
+            color: #000;
+            animation: moveProductsMessage 3s forwards
+        }        
+    }
+
+    .year {
+        text-align: center;
+        flex-grow: 1;
+        
+        .yearDigit {
+            width: 2.5em;
+            height: 3.5em;
+            overflow: hidden;
+            line-height: 3em;
+            display: inline-block;
+        }
+        
+        span {
+            position: relative;
+        }
+
+        .spin {
+            font-family: $main-font, sans-serif;
+            font-weight: bold;
+            font-size: 3em;
+            animation: spinNumbers 0.2s 5;
+        }
+
+        #digit1 {
+            top: -1em;
+        }
+        #digit2 {
+            top: -10.85em;
+        }
+        #digit3 {
+            top: 0.20em;
+        }
+        #digit4 {
+            top: -9.63em;
+        }
+    }
+}
+
+@keyframes shrinkBackground {
+    0% {
+        margin: 7px 0 0 0;
+    }
+    100% {
+        margin: 7px 107px 0 107px;
+    }
+}
+
+@keyframes moveAppleLogo {
+    0% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveProductsMessage {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -170px;
+    }
+}
+
+@keyframes spinNumbers {
+    0% {
+        top: 0em;
+    }
+    50% {
+        top: -5em;
+    }
+    100% {
+        top: -9em;
+    }
+}
